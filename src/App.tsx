@@ -1,25 +1,20 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+
+import { ColorModeProvider } from "./components/ui/color-mode";
+import { Box, ChakraProvider, createSystem, defaultConfig, Text } from "@chakra-ui/react";
+import { Navigation } from "./components/Navigation";
+
+const system = createSystem(defaultConfig, {});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="Appd-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ChakraProvider value={system}>
+      <ColorModeProvider>
+        <Box margin={5}>
+          <Navigation />
+        </Box>
+      </ColorModeProvider>
+    </ChakraProvider>
   );
 }
 
