@@ -1,20 +1,37 @@
 import React from "react";
 
-import { ColorModeProvider } from "./components/ui/color-mode";
-import { Box, ChakraProvider, createSystem, defaultConfig, Text } from "@chakra-ui/react";
-import { Navigation } from "./components/Navigation";
+import { Box } from "@chakra-ui/react";
+import { Route, Routes } from "react-router-dom";
 
-const system = createSystem(defaultConfig, {});
+import { Navigation } from "./components/Navigation";
+import { Home } from "./pages/Home";
 
 function App() {
   return (
-    <ChakraProvider value={system}>
-      <ColorModeProvider>
-        <Box margin={5}>
-          <Navigation />
-        </Box>
-      </ColorModeProvider>
-    </ChakraProvider>
+    <Box margin={5}>
+      <Navigation />
+      <Routes>
+        <Route path="/">
+          <Route
+            index
+            element={
+              <Box
+                data-state="open"
+                _open={{
+                  animation: "fade-in",
+                  transition: "ease-out",
+                  animationDuration: "1s",
+                }}
+              >
+                <Home />
+              </Box>
+            }
+          />
+          <Route path="/about" />
+          <Route path="/gallery" />
+        </Route>
+      </Routes>
+    </Box>
   );
 }
 
