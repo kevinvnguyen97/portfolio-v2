@@ -7,6 +7,7 @@ import {
   IconButton,
   VStack,
   DrawerRoot,
+  Box,
 } from "@chakra-ui/react";
 import {
   // DrawerRoot,
@@ -119,10 +120,12 @@ export const Navigation = () => {
   const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
   return (
     <HStack display="flex" justifyContent="space-between" marginBottom={5}>
-      <HamburgerMenu
-        isHamburgerMenuOpen={isHamburgerMenuOpen}
-        setIsHamburgerMenuOpen={setIsHamburgerMenuOpen}
-      />
+      <Box mdTo2xl={{ display: "none" }}>
+        <HamburgerMenu
+          isHamburgerMenuOpen={isHamburgerMenuOpen}
+          setIsHamburgerMenuOpen={setIsHamburgerMenuOpen}
+        />
+      </Box>
       <HStack spaceX={5}>
         <Heading>Kevin Nguyen</Heading>
         <HStack display="none" md={{ display: "block" }}>
