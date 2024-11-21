@@ -22,6 +22,7 @@ function App() {
                   transition: "ease-out",
                   animationDuration: "1s",
                 }}
+                paddingTop="40px"
               >
                 <Home />
               </Box>

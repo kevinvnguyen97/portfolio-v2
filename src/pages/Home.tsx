@@ -1,5 +1,39 @@
-import { Text } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  HStack,
+  IconButton,
+  VStack,
+  Link,
+  Image,
+} from "@chakra-ui/react";
+import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
+import { Links } from "../constants/links";
 
 export const Home = () => {
-  return <Text>My name is Kevin!</Text>;
+  return (
+    <Box alignContent="center">
+      <HStack justifyContent="space-between">
+        <VStack>
+          <Heading size="5xl">Kevin Nguyen</Heading>
+          <Heading size="xl">
+            I am a full stack developer seeking to unlock my potential
+          </Heading>
+          <HStack>
+            <Link href={Links.LINKEDIN} target="_blank">
+              <IconButton aria-label="Linkedin" variant="ghost" size="2xl">
+                <AiFillLinkedin />
+              </IconButton>
+            </Link>
+            <Link href={Links.GITHUB} target="_blank">
+              <IconButton aria-label="Github" variant="ghost" size="2xl">
+                <AiFillGithub />
+              </IconButton>
+            </Link>
+          </HStack>
+        </VStack>
+        <Image src="/images/profile.jpeg" />
+      </HStack>
+    </Box>
+  );
 };
