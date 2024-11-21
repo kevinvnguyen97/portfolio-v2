@@ -42,8 +42,8 @@ const Links = (props: { closeMenu?: () => void }) => {
       </Button>
       <Button
         onClick={() => {
-          navigate("/about");
           if (closeMenu) closeMenu();
+          navigate("/about");
         }}
         variant="ghost"
         _hover={{ textDecoration: "none" }}
@@ -53,8 +53,8 @@ const Links = (props: { closeMenu?: () => void }) => {
       </Button>
       <Button
         onClick={() => {
-          navigate("/portfolio");
           if (closeMenu) closeMenu();
+          navigate("/portfolio");
         }}
         variant="ghost"
         _hover={{ textDecoration: "none" }}
@@ -64,8 +64,8 @@ const Links = (props: { closeMenu?: () => void }) => {
       </Button>
       <Button
         onClick={() => {
-          navigate("/contact");
           if (closeMenu) closeMenu();
+          navigate("/contact");
         }}
         variant="ghost"
         _hover={{ textDecoration: "none" }}
@@ -84,13 +84,13 @@ const HamburgerMenu = (props: {
   const { isHamburgerMenuOpen, setIsHamburgerMenuOpen } = props;
 
   const closeMenu = () => {
-    setIsHamburgerMenuOpen(false);
+    if (isHamburgerMenuOpen) setIsHamburgerMenuOpen(false);
   };
 
   return (
     <DrawerRoot
-      isOpen={isHamburgerMenuOpen}
-      onOpenChange={(e: { open: boolean }) => setIsHamburgerMenuOpen(e.open)}
+      open={isHamburgerMenuOpen}
+      onOpenChange={() => setIsHamburgerMenuOpen(!isHamburgerMenuOpen)}
       placement="start"
     >
       <DrawerBackdrop />
@@ -118,6 +118,7 @@ const HamburgerMenu = (props: {
 
 export const Navigation = () => {
   const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
+
   return (
     <HStack display="flex" justifyContent="space-between" marginBottom={5}>
       <Box mdTo2xl={{ display: "none" }}>

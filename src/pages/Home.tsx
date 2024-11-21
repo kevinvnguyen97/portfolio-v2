@@ -6,6 +6,7 @@ import {
   VStack,
   Link,
   Image,
+  Flex,
 } from "@chakra-ui/react";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { Links } from "../constants/links";
@@ -13,7 +14,10 @@ import { Links } from "../constants/links";
 export const Home = () => {
   return (
     <Box alignContent="center">
-      <HStack justifyContent="space-evenly">
+      <Flex
+        justifyContent="space-evenly"
+        flexDirection={{ smToMd: "column", mdTo2xl: "row" }}
+      >
         <VStack>
           <Heading size="5xl">Kevin Nguyen</Heading>
           <Heading size="xl">Full Stack React Developer</Heading>
@@ -30,8 +34,8 @@ export const Home = () => {
             </Link>
           </HStack>
         </VStack>
-        <Image src="/images/profile.jpeg" />
-      </HStack>
+        <Image src="/images/profile.jpeg" maxHeight={440} />
+      </Flex>
     </Box>
   );
 };
