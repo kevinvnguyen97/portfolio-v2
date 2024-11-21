@@ -13,12 +13,10 @@ import { Links } from "../constants/links";
 export const Home = () => {
   return (
     <Box alignContent="center">
-      <HStack justifyContent="space-between">
+      <HStack justifyContent="space-evenly">
         <VStack>
           <Heading size="5xl">Kevin Nguyen</Heading>
-          <Heading size="xl">
-            I am a full stack developer seeking to unlock my potential
-          </Heading>
+          <Heading size="xl">Full Stack React Developer</Heading>
           <HStack>
             <Link href={Links.LINKEDIN} target="_blank">
               <IconButton aria-label="Linkedin" variant="ghost" size="2xl">
