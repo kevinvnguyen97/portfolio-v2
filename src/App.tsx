@@ -1,10 +1,9 @@
-import React from "react";
-
 import { Box } from "@chakra-ui/react";
 import { Route, Routes } from "react-router-dom";
 
 import { Navigation } from "./components/Navigation";
 import { Home } from "./pages/Home";
+import { Portfolio } from "./pages/Portfolio";
 
 function App() {
   return (
@@ -28,7 +27,21 @@ function App() {
             }
           />
           <Route path="/about" />
-          <Route path="/gallery" />
+          <Route
+            path="/portfolio"
+            element={
+              <Box
+                data-state="open"
+                _open={{
+                  animation: "fade-in",
+                  transition: "ease-out",
+                  animationDuration: "1s",
+                }}
+              >
+                <Portfolio />
+              </Box>
+            }
+          />
         </Route>
       </Routes>
     </Box>
