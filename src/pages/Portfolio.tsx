@@ -46,9 +46,15 @@ export const Portfolio = () => {
                 <AiFillGithub /> Repo
               </Button>
             </Link>
-            <Button variant="subtle">
-              <AdventureRoutesIcon /> App
-            </Button>
+            <Link
+              href={Links.ADVENTURE_ROUTES}
+              target="_blank"
+              _hover={{ textDecoration: "none" }}
+            >
+              <Button variant="subtle">
+                <AdventureRoutesIcon /> App
+              </Button>
+            </Link>
           </Card.Footer>
         </Box>
       </Card.Root>
