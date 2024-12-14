@@ -18,9 +18,9 @@ import {
   DrawerBody,
   DrawerFooter,
   DrawerCloseTrigger,
-} from "./ui/drawer";
+} from "/components/ui/drawer";
 import { useNavigate } from "react-router-dom";
-import { ColorModeButton } from "./ui/color-mode";
+import { ColorModeButton } from "/components/ui/color-mode";
 import { AiOutlineMenu } from "react-icons/ai";
 import { useState } from "react";
 

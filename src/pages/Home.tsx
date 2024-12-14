@@ -10,7 +10,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { AiFillLinkedin, AiFillGithub, AiOutlineGlobal } from "react-icons/ai";
-import { Links } from "../constants/links";
+import { Links } from "/constants/links";
 
 const BIO = `Hello! I am Kevin. I am currently a software engineer with three
             years of professional development experience and a Bachelors of Science degree from Lewis University.

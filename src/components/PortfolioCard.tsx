@@ -9,7 +9,7 @@ import {
   Link,
 } from "@chakra-ui/react";
 import { AiFillGithub } from "react-icons/ai";
-import { AdventureRoutesIcon } from "./AdventureRoutesIcon";
+import { AdventureRoutesIcon } from "/components/AdventureRoutesIcon";
 
 type PortfolioCardProps = {
   title: string;
