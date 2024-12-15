@@ -1,9 +1,9 @@
 import { Box } from "@chakra-ui/react";
 import { Route, Routes } from "react-router-dom";
 
-import { Navigation } from "/components/Navigation";
-import { Home } from "/pages/Home";
-import { Portfolio } from "/pages/Portfolio";
+import { Navigation } from "./components/Navigation";
+import { Home } from "./pages/Home";
+import { Portfolio } from "./pages/Portfolio";
 
 function App() {
   return (
