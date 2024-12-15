@@ -1,6 +1,6 @@
 import { Box } from "@chakra-ui/react";
 import { PortfolioCard } from "../components/PortfolioCard";
-import { Links } from "/constants/links";
+import { Links } from "../constants/links";
 
 export const Portfolio = () => {
   return (
